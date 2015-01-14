@@ -1,7 +1,6 @@
 class QuotesController < Rulers::Controller
   def a_quote
-    "There is nothing either good or bad " +
-      "but thinking makes it so."
+    "In Peace there is nothing so becomes a man, as modesty, stillness and humility."
   end
 end
 
