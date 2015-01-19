@@ -1,6 +1,8 @@
 # require 'rulers/array'
 require "rulers/version"
 require 'rulers/routing'
+require 'rulers/util'
+require 'rulers/dependencies'
 
 
 module Rulers
@@ -13,7 +15,11 @@ module Rulers
 
       klass, action = get_controller_and_action(env)
       controller = klass.new(env)
-      text = controller.send(action)
+      begin
+        text = controller.send(action)
+      rescue RuntimeError => error
+        return [200,{'Content-Type' => 'text/html'}, [error.to_s]]
+      end  
       [200, {'Content-Type' => 'text/html'}, [text]]
     end
   end
