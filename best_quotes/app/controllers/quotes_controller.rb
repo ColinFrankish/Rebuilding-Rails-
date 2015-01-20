@@ -6,5 +6,7 @@ class QuotesController < Rulers::Controller
   def exception
     raise "It's a bad error kidz!!"
   end
+
+  #So this comment should restart the server, right ? Due to the rerun gem....
 end
 
