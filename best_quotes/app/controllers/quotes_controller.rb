@@ -1,6 +1,7 @@
 class QuotesController < Rulers::Controller
   def a_quote
-    "Hi there Mr App Thing" + " some other stuff" + "\n<pre>\n#{env}\n</pre>"
+    render :a_quote, :noun => :winking
+   # "Hi there Mr App Thing" + " some other stuff" + "\n<pre>\n#{env}\n</pre>"
   end
 
   def exception
