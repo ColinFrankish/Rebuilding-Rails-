@@ -3,6 +3,7 @@ PATH
   specs:
     rulers (0.0.2)
       erubis
+      multi_json
       rack
 
 GEM
@@ -17,6 +18,7 @@ GEM
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
+    multi_json (1.10.1)
     rack (1.6.0)
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
