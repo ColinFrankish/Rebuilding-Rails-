@@ -46,14 +46,14 @@ module Rulers
         highest = names.map{ |b| b[0...-5].to_i}.max
         id = highest + 1
 
-        File.open("db/quotes#{id}.json", "w") do |f|
-          f.write << TEMPLATE 
-          {
-            "submitter"=> "#{hash["submitter"]}",
-            "quote" => "#{hash["quote"]}",
-            "attribution" => "#{hash["attribution"]}"
-          }
-            TEMPLATE
+        File.open("db/quotes/#{id}.json", "w") do |f|
+          f.write <<TEMPLATE
+{
+  "submitter"=> "#{hash["submitter"]}",
+  "quote" => "#{hash["quote"]}",
+  "attribution" => "#{hash["attribution"]}"
+}
+TEMPLATE
           end
             FileModel.new "db/quotes/#{id}.json"
       end

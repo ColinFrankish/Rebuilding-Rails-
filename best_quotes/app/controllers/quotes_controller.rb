@@ -20,11 +20,11 @@ class QuotesController < Rulers::Controller
 
   def new_quote
     attrs = {
-      "submitter" => "web_user",
+      "submitter" => "web user",
       "quote" => "A picture is worth a thousand faces",
       "attribution" => "Me"
     }
-    m = FileModel.create attrs
+    m = FileModel.create(attrs)
     render :quote, :obj => m
   end
 
