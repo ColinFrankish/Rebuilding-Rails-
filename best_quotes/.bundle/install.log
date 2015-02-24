@@ -1,0 +1,14 @@
+# Logfile created on 2015-02-24 12:14:32 +0000 by logger.rb/44203
+I, [2015-02-24T12:14:32.682542 #3059]  INFO -- : 0:  hitimes (1.2.2) from /Users/Colin/.rvm/gems/ruby-2.1.0-rc1/specifications/hitimes-1.2.2.gemspec
+I, [2015-02-24T12:14:33.672716 #3059]  INFO -- : 0:  timers (4.0.1) from /Users/Colin/.rvm/gems/ruby-2.1.0-rc1/specifications/timers-4.0.1.gemspec
+I, [2015-02-24T12:14:34.708378 #3059]  INFO -- : 0:  celluloid (0.16.0) from /Users/Colin/.rvm/gems/ruby-2.1.0-rc1/specifications/celluloid-0.16.0.gemspec
+I, [2015-02-24T12:14:36.025570 #3059]  INFO -- : 0:  erubis (2.7.0) from /Users/Colin/.rvm/gems/ruby-2.1.0-rc1/specifications/erubis-2.7.0.gemspec
+I, [2015-02-24T12:14:40.649297 #3059]  INFO -- : 0:  ffi (1.9.6) from /Users/Colin/.rvm/gems/ruby-2.1.0-rc1/specifications/ffi-1.9.6.gemspec
+I, [2015-02-24T12:14:41.901975 #3059]  INFO -- : 0:  rb-fsevent (0.9.4) from /Users/Colin/.rvm/gems/ruby-2.1.0-rc1/specifications/rb-fsevent-0.9.4.gemspec
+I, [2015-02-24T12:14:42.863611 #3059]  INFO -- : 0:  rb-inotify (0.9.5) from /Users/Colin/.rvm/gems/ruby-2.1.0-rc1/specifications/rb-inotify-0.9.5.gemspec
+I, [2015-02-24T12:14:43.806229 #3059]  INFO -- : 0:  listen (2.8.5) from /Users/Colin/.rvm/gems/ruby-2.1.0-rc1/specifications/listen-2.8.5.gemspec
+I, [2015-02-24T12:14:44.798426 #3059]  INFO -- : 0:  multi_json (1.10.1) from /Users/Colin/.rvm/gems/ruby-2.1.0-rc1/specifications/multi_json-1.10.1.gemspec
+I, [2015-02-24T12:14:46.025223 #3059]  INFO -- : 0:  rack (1.6.0) from /Users/Colin/.rvm/gems/ruby-2.1.0-rc1/specifications/rack-1.6.0.gemspec
+I, [2015-02-24T12:14:47.014916 #3059]  INFO -- : 0:  rerun (0.10.0) from /Users/Colin/.rvm/gems/ruby-2.1.0-rc1/specifications/rerun-0.10.0.gemspec
+I, [2015-02-24T12:14:47.036531 #3059]  INFO -- : 0:  rulers (0.0.2) from /Users/Colin/projects/rails_projects/rebuilding_rails/rulers/rulers.gemspec
+I, [2015-02-24T12:14:47.036821 #3059]  INFO -- : 0:  bundler (1.5.1) from /Users/Colin/.rvm/gems/ruby-2.1.0-rc1@global/specifications/bundler-1.5.1.gemspec
