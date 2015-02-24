@@ -28,6 +28,12 @@ class QuotesController < Rulers::Controller
     render :quote, :obj => m
   end
 
+  def show
+    quote = FileModel.find(params['id'])
+    ua = request.user_agent
+    render_response :quote, :obj => quote, :ua => ua
+  end
+
   #So this comment should restart the server, right ? Due to the rerun gem....
 end
 
