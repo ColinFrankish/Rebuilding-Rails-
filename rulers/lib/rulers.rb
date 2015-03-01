@@ -23,12 +23,12 @@ module Rulers
       else
         [200,{'Content-Type' => 'text/html'}, [text]]
       end
-      begin
-        text = controller.send(action)
-      rescue RuntimeError => error
-        return [200,{'Content-Type' => 'text/html'}, [error.to_s]]
-      end  
-      [200, {'Content-Type' => 'text/html'}, [text]]
+      # begin
+      #   text = controller.send(action)
+      # rescue RuntimeError => error
+      #   return [200,{'Content-Type' => 'text/html'}, [error.to_s]]
+      # end  
+      # [200, {'Content-Type' => 'text/html'}, [text]]
     end
   end
 
