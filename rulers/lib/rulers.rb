@@ -21,7 +21,9 @@ module Rulers
         st, hd, rs = controller.get_response.to_a
         [st, hd, [rs.body].flatten]
       else
-        [200,{'Content-Type' => 'text/html'}, [text]]
+        # the below has fixed the lint error (removing 'text' from insiden [])
+        # but checked the source code and its inside an array... odd
+        [200,{'Content-Type' => 'text/html'}, text]
       end
       # begin
       #   text = controller.send(action)

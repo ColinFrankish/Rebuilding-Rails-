@@ -1,4 +1,4 @@
-class QuotesController < Rulers::Controller
+class QuotesController < ::Rulers::Controller
   def a_quote
     render :a_quote, :noun => :winking
    # "Hi there Mr App Thing" + " some other stuff" + "\n<pre>\n#{env}\n</pre>"
@@ -29,7 +29,7 @@ class QuotesController < Rulers::Controller
   end
 
   def show
-    quote = FileModel.find(params['id'])
+    quote = FileModel.find(params["id"])
     ua = request.user_agent
     render_response :quote, :obj => quote, :ua => ua
   end
