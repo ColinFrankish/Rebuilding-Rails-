@@ -1,4 +1,4 @@
-class QuotesController < Rulers::Controller
+class QuotesController < ::Rulers::Controller
   def a_quote
     render :a_quote, :noun => :winking
    # "Hi there Mr App Thing" + " some other stuff" + "\n<pre>\n#{env}\n</pre>"
@@ -26,6 +26,12 @@ class QuotesController < Rulers::Controller
     }
     m = FileModel.create(attrs)
     render :quote, :obj => m
+  end
+
+  def show
+    quote = FileModel.find(params["id"])
+    ua = request.user_agent
+    render_response :quote, :obj => quote, :ua => ua
   end
 
   #So this comment should restart the server, right ? Due to the rerun gem....

@@ -16,12 +16,21 @@ module Rulers
 
       klass, action = get_controller_and_action(env)
       controller = klass.new(env)
-      begin
-        text = controller.send(action)
-      rescue RuntimeError => error
-        return [200,{'Content-Type' => 'text/html'}, [error.to_s]]
-      end  
-      [200, {'Content-Type' => 'text/html'}, [text]]
+      text = controller.send(action)
+      if controller.get_response
+        st, hd, rs = controller.get_response.to_a
+        [st, hd, [rs.body].flatten]
+      else
+        # the below has fixed the lint error (removing 'text' from insiden [])
+        # but checked the source code and its inside an array... odd
+        [200,{'Content-Type' => 'text/html'}, text]
+      end
+      # begin
+      #   text = controller.send(action)
+      # rescue RuntimeError => error
+      #   return [200,{'Content-Type' => 'text/html'}, [error.to_s]]
+      # end  
+      # [200, {'Content-Type' => 'text/html'}, [text]]
     end
   end
 
