@@ -14,8 +14,8 @@ module Rulers
         return [404, {'Content-Type' => 'text/html'}, []]
       end
 
-      klass, action = get_controller_and_action(env)
-      rack_app = klass.action(action)
+      # klass, action = get_controller_and_action(env)
+      rack_app = get_rack_app(env)
       rack_app.call(env)
       # controller = klass.new(env)
       # text = controller.send(action)

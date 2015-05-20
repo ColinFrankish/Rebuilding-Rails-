@@ -4,7 +4,7 @@ class RouteObject
     @rules = []
   end
 
-  def match 
+  def match url, *args
     options = {}  
     options = args.pop if args[-1].is_a?(Hash)
     options[:default] ||= {}
@@ -36,7 +36,6 @@ class RouteObject
       :dest => dest,
       :options => options,
       })
-    end
   end
 
   def check_url url
@@ -64,11 +63,11 @@ class RouteObject
 
   def get_dest(dest, routing_params = {})
     return dest if dest.respond_to?(:call)
-    if dest =~ /^([^#]+)#([^#]+)$/
-      name = $1.capitalize
-      cont = Object.const_get("#{name}Controller")
-      return cont.action($2, routing_params)
-    end
+      if dest =~ /^([^#]+)#([^#]+)$/
+        name = $1.capitalize
+        cont = Object.const_get("#{name}Controller")
+        return cont.action($2, routing_params)
+      end
     raise "No destination: #{dest.inspect}"
   end
 end
@@ -84,7 +83,7 @@ module Rulers
     # end
     def route &block
       @route_obj ||= RouteObject.new
-      !route_obj.instance_eval(&block)
+      @route_obj.instance_eval(&block)
     end
 
     def get_rack_app(env)
